@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmigrationKart - Your Visa & Migration Consultancy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-globe"></i>
+                <span>IMMIGRATIONKART</span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Immigration Journey Starts Here</h1>
+            <p>Expert visa consultancy for Australia, Canada, USA, Europe, Japan & UAE</p>
+            <button class="hero-btn" onclick="scrollToSection('contact')">Get Started Today</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About ImmigrationKart</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>What Are We?</h3>
+                    <p>ImmigrationKart is a distinguished immigration consultancy based in Gandhinagar, India and Sydney, Australia, dedicated to assisting individuals and families in achieving their relocation objectives with integrity and expertise.</p>
+                    <p>We specialise in student visas, work migration, tourist visas, and skilled migration to various countries, including Australia, Canada, the USA, Europe, Japan, and the UAE. Our knowledgeable team provides comprehensive support throughout your immigration journey.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Successful Migrations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2>Why Choose ImmigrationKart?</h2>
+            <p class="section-desc">Why Our Consultancy is the Best Choice for You</p>
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                    <p>Our team comprises licensed professionals with extensive knowledge of global immigration laws and procedures.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Service</h3>
+                    <p>Always available to provide prompt assistance and ensure seamless migration to your destinations.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Licensed Agent</h3>
+                    <p>Our Australian licensed partners guarantee that your visa applications are handled with the highest standards of professionalism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p class="section-desc">Comprehensive Solutions for Your Immigration Needs</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student Visas</h3>
+                    <p>We guide you through the entire process of obtaining student visas for universities in Australia, Canada, USA, and Europe.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Work Migration</h3>
+                    <p>Expert assistance in navigating work visa requirements and skilled migration programs across multiple countries.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Tourist Visas</h3>
+                    <p>Hassle-free tourist visa processing for your dream vacation destinations with complete documentation support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Skilled Migration</h3>
+                    <p>Comprehensive support for skilled migration programs including assessment, application, and settlement planning.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Sponsorship</h3>
+                    <p>Navigate family visa sponsorship programs to unite with your loved ones in your new country.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Customized Solutions</h3>
+                    <p>Tailored immigration solutions designed to meet your unique migration requirements and goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Our Services Section -->
+    <section class="our-services">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="service-features">
+                <div class="feature">
+                    <h3>Customized Solutions</h3>
+                    <p>Tailored Solutions designed to meet your unique migration requirements and goals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Innovative Strategies</h3>
+                    <p>Excellent strategies to drive growth and stay ahead of the competition in visa processing.</p>
+                </div>
+                <div class="feature">
+                    <h3>Quality of Work</h3>
+                    <p>We ensure the highest standards for every individual, delivering top-notch services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p class="section-desc">Hear From Our Happy Customers</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">ImmigrationKart made my Australian study visa process seamless. Their guidance on university selection and documentation was exceptional. I'm now pursuing my UG at the University of Tasmania!</p>
+                    <h4>Sugam Patel</h4>
+                    <p class="visa-type">Student Visa - Sydney</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Thanks to ImmigrationKart's licensed agent, my skilled migration to Australia was successful. They handled every detail professionally. I've been in Canberra for 2 years now with permanent residency!</p>
+                    <h4>Simranjeet Kaur</h4>
+                    <p class="visa-type">Skilled Visa - Canberra</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">The team at ImmigrationKart was incredibly supportive throughout my visa application. From document preparation to final approval, everything was handled with care and professionalism.</p>
+                    <h4>Rajesh Kumar</h4>
+                    <p class="visa-type">Work Visa - Toronto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-desc">Find Questions and Answers Related to Our Services</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What services do you offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive immigration consultancy services including student visas, work migration, tourist visas, skilled migration, and family sponsorship for countries like Australia, Canada, USA, Europe, Japan, and UAE.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can your services help me?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our services help by providing expert guidance, handling documentation, offering customized strategies, and leveraging our partnership with licensed agents to ensure your visa application is processed smoothly and efficiently.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide 24/7 support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, our customer service team is available to provide prompt assistance. We ensure seamless communication through multiple channels including WhatsApp, email, and phone to support your immigration journey.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What makes your agency different from others?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We differentiate ourselves through: 10+ years of experience, licensed agents in Australia, customized solutions, high success rate (50+ successful migrations), and a dedicated team of professionals with deep knowledge of global immigration laws.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I get started with your services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Getting started is easy! Click on the "Contact Us" button, fill out the inquiry form with your details, and our team will reach out to discuss your immigration goals and create a customized plan for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <p class="section-desc">Connect with us to begin your immigration journey</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone Number" required>
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="student">Student Visa</option>
+                            <option value="work">Work Migration</option>
+                            <option value="tourist">Tourist Visa</option>
+                            <option value="skilled">Skilled Migration</option>
+                            <option value="family">Family Sponsorship</option>
+                        </select>
+                        <textarea placeholder="Tell us about your immigration goals..." rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Submit Inquiry</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office Locations</h4>
+                            <p>Gandhinagar, India<br>Sydney, Australia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+61448471121">+61 4 4847 1121</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@immigrationkart.com">info@immigrationkart.com</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/61448471121" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/immigrationkart" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/immigrationkart" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/immigrationkart" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/immigrationkart" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ImmigrationKart | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
