@@ -62,18 +62,19 @@ const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Don't prevent default - let Formspree handle the submission
+        // e.preventDefault();
 
-        // Get form values
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const phone = contactForm.querySelector('input[type="tel"]').value;
-        const service = contactForm.querySelector('select').value;
-        const message = contactForm.querySelector('textarea').value;
+        // Get form values for validation only
+        const name = contactForm.querySelector('input[name="name"]').value;
+        const email = contactForm.querySelector('input[name="email"]').value;
+        const phone = contactForm.querySelector('input[name="phone"]').value;
+        const service = contactForm.querySelector('select[name="service"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
 
         // Validate form
         if (!name || !email || !phone || !service || !message) {
+            e.preventDefault();
             alert('Please fill all fields');
             return;
         }
@@ -81,6 +82,7 @@ if (contactForm) {
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email');
             return;
         }
@@ -88,33 +90,31 @@ if (contactForm) {
         // Phone validation (basic)
         const phoneRegex = /^[0-9\+\-\s\(\)]+$/;
         if (!phoneRegex.test(phone)) {
+            e.preventDefault();
             alert('Please enter a valid phone number');
             return;
         }
 
-        // Show success message
+        // Show submitting message
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message Sent Successfully!';
-        submitBtn.style.backgroundColor = '#10b981';
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
-        // Reset form
-        contactForm.reset();
-
-        // Reset button after 3 seconds
+        // Handle successful submission (Formspree will redirect or show success)
+        // This will run after Formspree processes the form
         setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.style.backgroundColor = '';
-        }, 3000);
+            if (!submitBtn.disabled) return; // Already handled
+            submitBtn.textContent = 'Message Sent Successfully!';
+            submitBtn.style.backgroundColor = '#10b981';
+            contactForm.reset();
 
-        // In a real application, you would send this data to a server
-        console.log('Form submitted:', {
-            name,
-            email,
-            phone,
-            service,
-            message
-        });
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.backgroundColor = '';
+                submitBtn.disabled = false;
+            }, 3000);
+        }, 2000);
     });
 }
 

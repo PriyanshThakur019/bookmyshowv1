@@ -281,11 +281,11 @@
             <p class="section-desc">Connect with us to begin your immigration journey</p>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone Number" required>
-                        <select required>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                        <select name="service" required>
                             <option value="">Select Service</option>
                             <option value="student">Student Visa</option>
                             <option value="work">Work Migration</option>
@@ -293,7 +293,7 @@
                             <option value="skilled">Skilled Migration</option>
                             <option value="family">Family Sponsorship</option>
                         </select>
-                        <textarea placeholder="Tell us about your immigration goals..." rows="5" required></textarea>
+                        <textarea name="message" placeholder="Tell us about your immigration goals..." rows="5" required></textarea>
                         <button type="submit" class="submit-btn">Submit Inquiry</button>
                     </form>
                 </div>
