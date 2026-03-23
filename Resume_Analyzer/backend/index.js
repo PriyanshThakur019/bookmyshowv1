@@ -6,10 +6,8 @@ const pdfParse = require('pdf-parse');
 
 const app = express();
 
-// ✅ CORS (allow frontend)
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://your-frontend.vercel.app'],
-  methods: ['GET', 'POST'],
+  origin: ['http://localhost:3001']
 }));
 
 app.use(express.json());
