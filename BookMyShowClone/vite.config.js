@@ -6,23 +6,23 @@ export default defineConfig({
   server: {
     proxy: {
       '/login': {
-        target: 'http://localhost:8080',
+        target: 'https://spring-boot-tutorial-8yy3.onrender.com',
         changeOrigin: true,
       },
       '/register': {
-        target: 'http://localhost:8080',
+        target: 'https://spring-boot-tutorial-8yy3.onrender.com',
         changeOrigin: true,
       },
       '/getFutureEventsList': {
-        target: 'http://localhost:8080',
+        target: 'https://spring-boot-tutorial-8yy3.onrender.com',
         changeOrigin: true,
       },
       '/registerUserForEvent': {
-        target: 'http://localhost:8080',
+        target: 'https://spring-boot-tutorial-8yy3.onrender.com',
         changeOrigin: true,
       },
       '/getAllEventsPerUser': {
-        target: 'http://localhost:8080',
+        target: 'https://spring-boot-tutorial-8yy3.onrender.com',
         changeOrigin: true,
       },
     },
