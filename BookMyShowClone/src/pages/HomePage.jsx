@@ -27,8 +27,7 @@ function HomePage({ currentUser, onEventClick, notice, noticeType, onNavigateToA
       setError('');
 
       try {
-        const API_BASE_URL = 'https://spring-boot-tutorial-8yy3.onrender.com';
-        const response = await fetch('`${API_BASE_URL}/getFutureEventsList`');
+        const response = await fetch('https://spring-boot-tutorial-8yy3.onrender.com/getFutureEventsList');
         if (!response.ok) {
           throw new Error(`${response.status} ${response.statusText}`);
         }
