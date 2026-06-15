@@ -27,7 +27,7 @@ function BookingsPage({ username, onBack }) {
       setLoading(true);
       setError('');
       try {
-        const resp = await fetch(`/getAllEventsPerUser?username=${encodeURIComponent(username)}`);
+        const resp = await fetch(`https://spring-boot-tutorial-8yy3.onrender.com/getAllEventsPerUser?username=${encodeURIComponent(username)}`);
         if (!resp.ok) {
           throw new Error(`${resp.status} ${resp.statusText}`);
         }
