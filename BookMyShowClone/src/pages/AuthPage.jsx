@@ -47,7 +47,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/login', {
+      const response = await fetch('https://spring-boot-tutorial-8yy3.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/register', {
+      const response = await fetch('https://spring-boot-tutorial-8yy3.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
