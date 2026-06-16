@@ -53,7 +53,7 @@ function AppContent() {
         registeredTime: new Date().toISOString(),
       };
 
-      const response = await fetch('/registerUserForEvent', {
+      const response = await fetch('/api/proxy?endpoint=registerUserForEvent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
