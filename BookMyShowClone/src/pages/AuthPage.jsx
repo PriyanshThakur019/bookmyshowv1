@@ -47,7 +47,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('https://spring-boot-tutorial-8yy3.onrender.com/login', {
+      const response = await fetch('/api/proxy?endpoint=login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('https://spring-boot-tutorial-8yy3.onrender.com/register', {
+      const response = await fetch('/api/proxy?endpoint=register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -191,7 +191,7 @@ function AuthPage({ onLoginSuccess }) {
               name="name"
               type="text"
               value={registerData.name}
-              onChange={handleRegisterChange}
+              onChange={registerChange}
               required
               placeholder="John Doe"
             />
