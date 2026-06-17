@@ -21,6 +21,8 @@ function AuthPage({ onLoginSuccess }) {
   const [messageType, setMessageType] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   const showMessage = (text, type = 'info') => {
     setMessage(text);
     setMessageType(type);
@@ -47,7 +49,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/proxy?endpoint=login', {
+      const response = await fetch(`${API_BASE_URL}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +84,7 @@ function AuthPage({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/proxy?endpoint=register', {
+      const response = await fetch(`${API_BASE_URL}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -191,7 +193,7 @@ function AuthPage({ onLoginSuccess }) {
               name="name"
               type="text"
               value={registerData.name}
-              onChange={registerChange}
+              onChange={handleRegisterChange}
               required
               placeholder="John Doe"
             />
