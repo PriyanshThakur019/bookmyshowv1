@@ -22,13 +22,14 @@ function BookingsPage({ username, onBack }) {
   const [error, setError] = useState('');
   const [view, setView] = useState('upcoming'); // 'upcoming' | 'past'
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     async function fetchBookings() {
       setLoading(true);
       setError('');
       try {
-        const endpoint = `getAllEventsPerUser?username=${encodeURIComponent(username)}`;
-        const resp = await fetch(`/api/proxy?endpoint=${encodeURIComponent(endpoint)}`);
+        const resp = await fetch(`${API_BASE_URL}/getAllEventsPerUser?username=${encodeURIComponent(username)}`);
         if (!resp.ok) {
           throw new Error(`${resp.status} ${resp.statusText}`);
         }
@@ -47,7 +48,7 @@ function BookingsPage({ username, onBack }) {
     }
 
     if (username) fetchBookings();
-  }, [username]);
+  }, [username, API_BASE_URL]);
 
   if (!username) return <div className="card">No user specified.</div>;
 
