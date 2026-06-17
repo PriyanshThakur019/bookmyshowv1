@@ -13,6 +13,8 @@ function AppContent() {
   const [notice, setNotice] = useState('');
   const [noticeType, setNoticeType] = useState('info');
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     if (currentUser) {
       localStorage.setItem('currentUser', currentUser);
@@ -53,7 +55,7 @@ function AppContent() {
         registeredTime: new Date().toISOString(),
       };
 
-      const response = await fetch('/api/proxy?endpoint=registerUserForEvent', {
+      const response = await fetch(`${API_BASE_URL}/registerUserForEvent`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
