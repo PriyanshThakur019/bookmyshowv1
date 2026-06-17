@@ -27,7 +27,8 @@ function HomePage({ currentUser, onEventClick, notice, noticeType, onNavigateToA
       setError('');
 
       try {
-        const response = await fetch('/api/proxy?endpoint=getFutureEventsList');
+        const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/getFutureEventsList`;
+        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error(`${response.status} ${response.statusText}`);
         }
